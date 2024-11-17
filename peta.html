@@ -12,38 +12,17 @@
     <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
     <link rel="stylesheet" href="./resources/qgis2web.css">
     <style>
-        html, body {
-            background-color: #ffffff;
-        }
-        .ol-control > * {
-            background-color: #cb11f8!important;
-            color: #444444!important;
-            border-radius: 0px;
-        }
-        .ol-attribution a, .gcd-gl-input::placeholder, .search-layer-input-search::placeholder {
-            color: #444444!important;
-        }
-        .search-layer-input-search {
-            background-color: #cb11f8!important;
-        }
-        .ol-control > *:focus, .ol-control >*:hover {
-            background-color: rgba(203, 17, 248, 0.7)!important;
-        } 
-        .ol-control {
-            background-color: rgba(255,255,255,.4) !important;
-            padding: 2px !important;
-        } 
+        html, body { background-color: #ffffff; }
+        .ol-control > * { background-color: #cb11f8!important; color: #444444!important; border-radius: 0px; }
+        .ol-attribution a, .gcd-gl-input::placeholder, .search-layer-input-search::placeholder { color: #444444!important; }
+        .search-layer-input-search { background-color: #cb11f8!important; }
+        .ol-control > *:focus, .ol-control >*:hover { background-color: rgba(203, 17, 248, 0.7)!important; }
+        .ol-control { background-color: rgba(255,255,255,.4) !important; padding: 2px !important; }
     </style>
-
     <style>
-        html, body, #map {
-            width: 100%;
-            height: 100%;
-            padding: 0;
-            margin: 0;
-        }
+        html, body, #map { width: 100%; height: 100%; padding: 0; margin: 0; }
     </style>
-    <title>Map without OpenStreetMap</title>
+    <title></title>
 </head>
 <body>
     <div id="map">
@@ -52,8 +31,6 @@
             <div id="popup-content"></div>
         </div>
     </div>
-    
-    <!-- Scripts for Map Configuration -->
     <script src="resources/qgis2web_expressions.js"></script>
     <script src="resources/proj4.js"></script>
     <script>proj4.defs('EPSG:4326','+proj=longlat +datum=WGS84 +no_defs');</script>
@@ -61,28 +38,51 @@
     <script src="./resources/ol.js"></script>
     <script src="./resources/ol-layerswitcher.js"></script>
     <script src="resources/ol-geocoder.js"></script>
-    
     <!-- Layer Scripts -->
     <script src="layers/ADMINISTRASIDESA_AR_25K_1.js"></script>
     <script src="layers/PEMUKIMAN_AR_25K_2.js"></script>
-    <!-- (Include only the layers you want without base map) -->
-    
+    <script src="layers/SUNGAI_AR_25K_3.js"></script>
+    <script src="layers/AGRISAWAH_AR_25K_4.js"></script>
+    <script src="layers/AGRIKEBUN_AR_25K_5.js"></script>
+    <script src="layers/NONAGRIALANG_AR_25K_6.js"></script>
+    <script src="layers/ihum_poly_7.js"></script>
+    <script src="layers/ihum_line_8.js"></script>
+    <script src="layers/TOPONIMI_PT_25K_9.js"></script>
+    <script src="layers/SUNGAI_LN_25K_10.js"></script>
+    <script src="layers/IRIGASI_LN_25K_11.js"></script>
+    <script src="layers/TAMBANGAN_PT_25K_12.js"></script>
+    <script src="layers/TONGGAKKM_PT_25K_13.js"></script>
+    <script src="layers/PEMERINTAHAN_PT_25K_14.js"></script>
+    <script src="layers/NIAGA_PT_25K_15.js"></script>
+    <script src="layers/SARANAIBADAH_PT_25K_16.js"></script>
+    <script src="layers/BANGUNAN_PT_25K_17.js"></script>
+    <script src="layers/KESEHATAN_PT_25K_18.js"></script>
+    <script src="layers/JEMBATAN_PT_25K_19.js"></script>
+    <script src="layers/PENDIDIKAN_PT_25K_20.js"></script>
+    <script src="layers/ADMINISTRASIDESA_AR_25Kcopy_21.js"></script>
+    <!-- Style Scripts -->
     <script src="styles/ADMINISTRASIDESA_AR_25K_1_style.js"></script>
     <script src="styles/PEMUKIMAN_AR_25K_2_style.js"></script>
-    
-    <!-- Map Initialization Script -->
-    <script>
-        // Initialize the map without a base layer
-        const map = new ol.Map({
-            target: 'map',
-            layers: [
-                // Add only the layers you need here, without OpenStreetMap or other base layers
-            ],
-            view: new ol.View({
-                center: ol.proj.fromLonLat([110.0, -7.0]), // Set to your coordinates
-                zoom: 10
-            })
-        });
-    </script>
+    <script src="styles/SUNGAI_AR_25K_3_style.js"></script>
+    <script src="styles/AGRISAWAH_AR_25K_4_style.js"></script>
+    <script src="styles/AGRIKEBUN_AR_25K_5_style.js"></script>
+    <script src="styles/NONAGRIALANG_AR_25K_6_style.js"></script>
+    <script src="styles/ihum_poly_7_style.js"></script>
+    <script src="styles/ihum_line_8_style.js"></script>
+    <script src="styles/TOPONIMI_PT_25K_9_style.js"></script>
+    <script src="styles/SUNGAI_LN_25K_10_style.js"></script>
+    <script src="styles/IRIGASI_LN_25K_11_style.js"></script>
+    <script src="styles/TAMBANGAN_PT_25K_12_style.js"></script>
+    <script src="styles/TONGGAKKM_PT_25K_13_style.js"></script>
+    <script src="styles/PEMERINTAHAN_PT_25K_14_style.js"></script>
+    <script src="styles/NIAGA_PT_25K_15_style.js"></script>
+    <script src="styles/SARANAIBADAH_PT_25K_16_style.js"></script>
+    <script src="styles/BANGUNAN_PT_25K_17_style.js"></script>
+    <script src="styles/KESEHATAN_PT_25K_18_style.js"></script>
+    <script src="styles/JEMBATAN_PT_25K_19_style.js"></script>
+    <script src="styles/PENDIDIKAN_PT_25K_20_style.js"></script>
+    <script src="styles/ADMINISTRASIDESA_AR_25Kcopy_21_style.js"></script>
+    <script src="./resources/Autolinker.min.js"></script>
+    <script src="./resources/qgis2web.js"></script>
 </body>
 </html>
