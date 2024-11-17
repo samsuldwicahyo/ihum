@@ -1,18 +1,17 @@
 ol.proj.proj4.register(proj4);
-//ol.proj.get("EPSG:4326").setExtent([109.368108, -7.671409, 109.417978, -7.639804]);
+// ol.proj.get("EPSG:4326").setExtent([109.368108, -7.671409, 109.417978, -7.639804]);
 var wms_layers = [];
 
+var lyr_OpenStreetMap_0 = new ol.layer.Tile({
+    'title': 'OpenStreetMap',
+    'opacity': 1.000000,
+    'visible': false, // Membuat layer tidak terlihat (unchecked) secara default
+    source: new ol.source.XYZ({
+        attributions: ' ',
+        url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png'
+    })
+});
 
-        var lyr_OpenStreetMap_0 = new ol.layer.Tile({
-            'title': 'OpenStreetMap',
-            'opacity': 1.000000,
-            
-            
-            source: new ol.source.XYZ({
-            attributions: ' ',
-                url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png'
-            })
-        });
 var format_ADMINISTRASIDESA_AR_25K_1 = new ol.format.GeoJSON();
 var features_ADMINISTRASIDESA_AR_25K_1 = format_ADMINISTRASIDESA_AR_25K_1.readFeatures(json_ADMINISTRASIDESA_AR_25K_1, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
@@ -329,7 +328,7 @@ var lyr_ADMINISTRASIDESA_AR_25Kcopy_21 = new ol.layer.Vector({
                 title: '<img src="styles/legend/ADMINISTRASIDESA_AR_25Kcopy_21.png" /> ADMINISTRASIDESA_AR_25K copy'
             });
 
-lyr_OpenStreetMap_0.setVisible(true);lyr_ADMINISTRASIDESA_AR_25K_1.setVisible(true);lyr_PEMUKIMAN_AR_25K_2.setVisible(true);lyr_SUNGAI_AR_25K_3.setVisible(true);lyr_AGRISAWAH_AR_25K_4.setVisible(true);lyr_AGRIKEBUN_AR_25K_5.setVisible(true);lyr_NONAGRIALANG_AR_25K_6.setVisible(true);lyr_ihum_poly_7.setVisible(true);lyr_ihum_line_8.setVisible(true);lyr_TOPONIMI_PT_25K_9.setVisible(true);lyr_SUNGAI_LN_25K_10.setVisible(true);lyr_IRIGASI_LN_25K_11.setVisible(true);lyr_TAMBANGAN_PT_25K_12.setVisible(true);lyr_TONGGAKKM_PT_25K_13.setVisible(true);lyr_PEMERINTAHAN_PT_25K_14.setVisible(true);lyr_NIAGA_PT_25K_15.setVisible(true);lyr_SARANAIBADAH_PT_25K_16.setVisible(true);lyr_BANGUNAN_PT_25K_17.setVisible(true);lyr_KESEHATAN_PT_25K_18.setVisible(true);lyr_JEMBATAN_PT_25K_19.setVisible(true);lyr_PENDIDIKAN_PT_25K_20.setVisible(true);lyr_ADMINISTRASIDESA_AR_25Kcopy_21.setVisible(true);
+lyr_OpenStreetMap_0.setVisible(false);lyr_ADMINISTRASIDESA_AR_25K_1.setVisible(true);lyr_PEMUKIMAN_AR_25K_2.setVisible(true);lyr_SUNGAI_AR_25K_3.setVisible(true);lyr_AGRISAWAH_AR_25K_4.setVisible(true);lyr_AGRIKEBUN_AR_25K_5.setVisible(true);lyr_NONAGRIALANG_AR_25K_6.setVisible(true);lyr_ihum_poly_7.setVisible(true);lyr_ihum_line_8.setVisible(true);lyr_TOPONIMI_PT_25K_9.setVisible(true);lyr_SUNGAI_LN_25K_10.setVisible(true);lyr_IRIGASI_LN_25K_11.setVisible(true);lyr_TAMBANGAN_PT_25K_12.setVisible(true);lyr_TONGGAKKM_PT_25K_13.setVisible(true);lyr_PEMERINTAHAN_PT_25K_14.setVisible(true);lyr_NIAGA_PT_25K_15.setVisible(true);lyr_SARANAIBADAH_PT_25K_16.setVisible(true);lyr_BANGUNAN_PT_25K_17.setVisible(true);lyr_KESEHATAN_PT_25K_18.setVisible(true);lyr_JEMBATAN_PT_25K_19.setVisible(true);lyr_PENDIDIKAN_PT_25K_20.setVisible(true);lyr_ADMINISTRASIDESA_AR_25Kcopy_21.setVisible(true);
 var layersList = [lyr_OpenStreetMap_0,lyr_ADMINISTRASIDESA_AR_25K_1,lyr_PEMUKIMAN_AR_25K_2,lyr_SUNGAI_AR_25K_3,lyr_AGRISAWAH_AR_25K_4,lyr_AGRIKEBUN_AR_25K_5,lyr_NONAGRIALANG_AR_25K_6,lyr_ihum_poly_7,lyr_ihum_line_8,lyr_TOPONIMI_PT_25K_9,lyr_SUNGAI_LN_25K_10,lyr_IRIGASI_LN_25K_11,lyr_TAMBANGAN_PT_25K_12,lyr_TONGGAKKM_PT_25K_13,lyr_PEMERINTAHAN_PT_25K_14,lyr_NIAGA_PT_25K_15,lyr_SARANAIBADAH_PT_25K_16,lyr_BANGUNAN_PT_25K_17,lyr_KESEHATAN_PT_25K_18,lyr_JEMBATAN_PT_25K_19,lyr_PENDIDIKAN_PT_25K_20,lyr_ADMINISTRASIDESA_AR_25Kcopy_21];
 lyr_ADMINISTRASIDESA_AR_25K_1.set('fieldAliases', {'KDPPUM': 'KDPPUM', 'NAMOBJ': 'NAMOBJ', 'REMARK': 'REMARK', 'KDPBPS': 'KDPBPS', 'FCODE': 'FCODE', 'LUASWH': 'LUASWH', 'UUPP': 'UUPP', 'SRS_ID': 'SRS_ID', 'LCODE': 'LCODE', 'METADATA': 'METADATA', 'KDEBPS': 'KDEBPS', 'KDEPUM': 'KDEPUM', 'KDCBPS': 'KDCBPS', 'KDCPUM': 'KDCPUM', 'KDBBPS': 'KDBBPS', 'KDBPUM': 'KDBPUM', 'WADMKD': 'WADMKD', 'WIADKD': 'WIADKD', 'WADMKC': 'WADMKC', 'WIADKC': 'WIADKC', 'WADMKK': 'WADMKK', 'WIADKK': 'WIADKK', 'WADMPR': 'WADMPR', 'WIADPR': 'WIADPR', 'TIPADM': 'TIPADM', 'SHAPE_Leng': 'SHAPE_Leng', 'SHAPE_Area': 'SHAPE_Area', });
 lyr_PEMUKIMAN_AR_25K_2.set('fieldAliases', {'NAMOBJ': 'NAMOBJ', 'FCODE': 'FCODE', 'REMARK': 'REMARK', 'SRS_ID': 'SRS_ID', 'LCODE': 'LCODE', 'METADATA': 'METADATA', 'SHAPE_Leng': 'SHAPE_Leng', 'SHAPE_Area': 'SHAPE_Area', });
